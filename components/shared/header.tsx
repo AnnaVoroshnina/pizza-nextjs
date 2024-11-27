@@ -3,7 +3,8 @@ import {cn} from "@/lib/utils";
 import Image from "next/image";
 import {ArrowRight, ShoppingCart, User} from "lucide-react";
 import {Button} from "@/components/ui";
-import {Container} from "@/components/shared";
+import {Container, SearchInput} from "@/components/shared";
+import Link from "next/link";
 
 interface Props {
     className?: string
@@ -14,12 +15,17 @@ export const Header: FC<Props> = ({className}) => {
         <header className={cn('border border-b', className)}>
             <Container className='flex items-center justify-between py-8'>
                 {/*Левая часть*/}
-                <div className='flex items-center gap-2'>
-                    <Image src={'/logo.png'} alt={'Logo'} width={35} height={35}/>
-                    <div>
-                        <h1 className='text-2xl uppercase font-black text-green-800'>Juicy Pizza</h1>
-                        <p className='text-sm text-green-600 leading-3'>сочней уже некуда</p>
+                <Link href='/'>
+                    <div className='flex items-center gap-2'>
+                        <Image src={'/logo.png'} alt={'Logo'} width={35} height={35}/>
+                        <div>
+                            <h1 className='text-2xl uppercase font-black text-green-800'>Juicy Pizza</h1>
+                            <p className='text-sm text-green-600 leading-3'>сочней уже некуда</p>
+                        </div>
                     </div>
+                </Link>
+                <div className="mx-10 flex-1">
+                    <SearchInput />
                 </div>
                 {/*Правая часть*/}
                 <div className='flex items-center gap-3'>
@@ -29,7 +35,7 @@ export const Header: FC<Props> = ({className}) => {
                     </Button>
                     <div>
                         <Button className='group relative'>
-                            <b>520 ₽</b>
+                        <b>520 ₽</b>
                             <span className='h-full w-[1px] bg-white/30 mx-3'/>
                             <div className='flex items-center gap-1 transition duration-300 group-hover:opacity-0'>
                                 <ShoppingCart size={16} className='relative' strokeWidth={2} />
