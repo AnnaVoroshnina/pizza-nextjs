@@ -15,7 +15,6 @@ export function useFilterIngredients (): ReturnProps {
 
     const [selectedIds, {toggle}] = useSet(new Set<string>([]))
 
-
     useEffect(() => {
         async function fetchIngredients () {
             try {
