@@ -31,12 +31,12 @@ export const ProductsGroupList: FC<Props> = ({title, products, categoryId, class
         <div className={className} id={title} ref={intersectionRef}>
             <Title text={title} size='lg' className='font-extrabold mb-5 text-green-800' />
             <div className={cn('grid grid-cols-3 gap-[50px]', listClassName)}>
-                {products.filter((product) => product.items.length > 0).map((product, index) => (
+                {products.filter((product) => product.productItems.length > 0).map((product, index) => (
                     <ProductCard
                         key={product.id}
                         id={product.id}
                         name={product.name}
-                        price={product.items[0].price}
+                        price={product.productItems[0].price}
                         imageUrl={product.imageUrl} />
                 ))}
             </div>
