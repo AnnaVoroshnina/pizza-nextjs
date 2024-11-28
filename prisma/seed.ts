@@ -121,6 +121,7 @@ async function up() {
             generateProductItem({productId: 15}),
             generateProductItem({productId: 16}),
             generateProductItem({productId: 17}),
+            generateProductItem({productId: 18}),
         ],
     })
     await prisma.cart.createMany({

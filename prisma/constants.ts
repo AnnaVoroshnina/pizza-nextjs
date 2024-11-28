@@ -3,6 +3,7 @@ export const categories = [
     {name: "Завтрак"},
     {name: "Закуски"},
     {name: "Коктейли"},
+    {name: "Кофе"},
     {name: "Напитки"},
 ]
 
@@ -113,7 +114,7 @@ export const products = [
     {
         name: 'Кофе Латте',
         imageUrl: 'https://media.dodostatic.net/image/r:292x292/11EE7D61B0C26A3F85D97A78FEEE00AD.webp',
-        categoryId: 2,
+        categoryId: 5,
     },
     {
         name: 'Дэнвич ветчина и сыр',
@@ -184,5 +185,10 @@ export const products = [
         name: 'Кофе Латте',
         imageUrl: 'https://media.dodostatic.net/image/r:292x292/11EE7D61B0C26A3F85D97A78FEEE00AD.webp',
         categoryId: 5,
+    },
+    {
+        name: 'Добрый Апельсин',
+        imageUrl: 'https://media.dodostatic.net/image/r:292x292/11EE7D61AAE50A4CB880D842915C82DC.avif',
+        categoryId: 6,
     },
 ];
