@@ -1,9 +1,9 @@
 import {FC} from "react";
 import {cn} from "@/shared/lib/utils";
 import Image from "next/image";
-import {ArrowRight, ShoppingCart, User} from "lucide-react";
+import {User} from "lucide-react";
 import {Button} from "@/shared/components/ui";
-import {Container, SearchInput} from "@/shared/components/shared/index";
+import {CartButton, Container, SearchInput} from "@/shared/components/shared/index";
 import Link from "next/link";
 
 interface Props {
@@ -25,7 +25,7 @@ export const Header: FC<Props> = ({className}) => {
                     </div>
                 </Link>
                 <div className="mx-10 flex-1">
-                    <SearchInput />
+                    <SearchInput/>
                 </div>
                 {/*Правая часть*/}
                 <div className='flex items-center gap-3'>
@@ -33,17 +33,7 @@ export const Header: FC<Props> = ({className}) => {
                         <User size={16}/>
                         Войти
                     </Button>
-                    <div>
-                        <Button className='group relative'>
-                        <b>520 ₽</b>
-                            <span className='h-full w-[1px] bg-white/30 mx-3'/>
-                            <div className='flex items-center gap-1 transition duration-300 group-hover:opacity-0'>
-                                <ShoppingCart size={16} className='relative' strokeWidth={2} />
-                                <b>3</b>
-                            </div>
-                            <ArrowRight size={20} className='absolute right-5 transition duration-300 -translate-x-2 opacity-0 group-hover:opacity-100 group-hover:translate-x-0'/>
-                        </Button>
-                    </div>
+                    <CartButton/>
                 </div>
             </Container>
         </header>
